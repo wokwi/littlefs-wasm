@@ -1,0 +1,26 @@
+{
+  "name": "littlefs",
+  "version": "0.0.1",
+  "description": "littlefs compiled with Web Assembly (wasm)",
+  "main": "dist/littlefs.js",
+  "types": "./dist/littlefs.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wokwi/littlefs-wasm.git"
+  },
+  "keywords": [
+    "wasm"
+  ],
+  "author": "Uri Shaked",
+  "files": [
+    "dist",
+    "license-littlefs.txt"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wokwi/littlefs-wasm/issues"
+  },
+  "homepage": "https://github.com/wokwi/littlefs-wasm#readme",
+  "devDependencies": {}
+}

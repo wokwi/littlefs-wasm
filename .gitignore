@@ -1,2 +1,2 @@
-littlefs.js
-littlefs.wasm
+node_modules
+dist
