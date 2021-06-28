@@ -12,9 +12,12 @@ CFLAGS = -s MODULARIZE=1 -s 'EXPORT_NAME="littlefs"' -s EXPORT_ES6=1 -I littlefs
 	-s 'EXPORTED_FUNCTIONS=$(EXPORTS)' \
 	-s EXPORTED_RUNTIME_METHODS="['addFunction', 'cwrap']" -s ALLOW_TABLE_GROWTH=1 -s ASSERTIONS=0
 
-all: dist/littlefs.js
+all: dist/littlefs.js dist/littlefs-browser.js
 
 dist/littlefs.js: $(SOURCES) | dist
+	$(CC) -o $@ $(CFLAGS) $^
+
+dist/littlefs-browser.js: $(SOURCES) | dist
 	$(CC) -o $@ $(CFLAGS) -s ENVIRONMENT=web $^
 
 dist:
